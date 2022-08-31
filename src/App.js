@@ -10,7 +10,16 @@ function App() {
     return (
         <ul>
             {WEATHER.map((value) => {
-                return <li>{value.weather}</li>;
+                return (
+                    <>
+                        <p>{value.weather}</p>
+                        {value.umbrella ? (
+                            <p>I need my umbrella</p>
+                        ) : (
+                            <p>I don't need my umbrella</p>
+                        )}
+                    </>
+                );
             })}
         </ul>
     );
