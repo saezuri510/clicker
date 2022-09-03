@@ -1,34 +1,34 @@
-import styled from "styled-components";
-import { useState } from "react";
+import React from "react";
+import { Welcome01 } from "./Welcome01";
+import Welcome02 from "./Welcome02";
+import { Welcome03 } from "./Welcome03";
+import { Welcome04 } from "./Welcome04";
 
-const Button = styled.button`
-    margin: 16px 0;
-`;
+const data = {
+    name: "Mike",
+    id: 123,
+    age: 30,
+};
 
-function App() {
-    //useStateでsetCount関数が変化したときcountが変わる
-    const [count, setCount] = useState(0);
-    const add = () => setCount((prevCount) => prevCount + 1);
-    const doubleAdd = () => {
-        add();
-        add();
-    };
+const App = () => {
     return (
         <>
-            {count === 3 ? (
-                <>
-                    <Button onClick={() => setCount(0)}>clear!</Button>
-                    <br />
-                </>
-            ) : (
-                <p>You Clicked {count} times</p>
-            )}
-            <button onClick={add}>+1</button>
-            <button onClick={() => setCount((prev) => prev - 1)}>-1</button>
-            <button onClick={() => setCount(0)}>Reset</button>
-            <button onClick={doubleAdd}>Double Add</button>
+            <Welcome01 name="Sara" />
+            <Welcome02 name="Cahal" />
+            <Welcome03 name="Edite" />
+            <Welcome04 {...data} />
         </>
     );
-}
+};
+
+//FunctionalComponent
+// function App(){return()}
+
+//ClassComponent
+// class App extends React.Component{
+//     render(){
+//         return()
+//     }
+// }
 
 export default App;
