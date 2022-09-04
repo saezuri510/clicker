@@ -1,8 +1,8 @@
 export const Welcome03 = ({ name }) => {
     return <h1>Hello, {name}</h1>;
     //ClassComponent
-    // ...
-    // render(){
+    // export class ...
+    // render(props){
     //     const {name} = this.props;
     //     return(
     //         <h1>Hello, {name}</h1>
